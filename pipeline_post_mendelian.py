@@ -47,7 +47,10 @@ number_samples = ''
 fold = 10
 num_trials = 3
 analysis = ['AD', 'male', 'X']
-#analysis = ['GC', 'female']
+#the different analyses that can be performed are:
+#[AD, male], [AR, male], [GC, male], [GC_HOMO, male], ['AD', 'male', 'X'], ['GC', 'male', 'X']
+#[AD, female], [AR, female], [GC, female], [GC_HOMO, female]
+
 
 # load df_task
 df_task_original = pd.read_csv(data_folder + 'phenotype.csv').set_index('sample')[['age', 'gender', 'grading']]
