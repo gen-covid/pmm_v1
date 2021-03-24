@@ -21,25 +21,17 @@ For all the analyses only variants that are classified with impact HIGH or MODER
 
 The required inputs for this step are the VCF files and VEP annotation files divided by chromosomes and sorted by ensembl gene code. GRCh38 is assumed as a reference genome.
 
-To execute this step run:
-bash boolean_features.sh to sort the annotation files by gene
-python featurize.py to create the CSV with boolean features
-
 The boolean representations are described in the following subsections. Each boolean representation is saved in a CSV file with corresponding name, which is then used for fitting the model.
 
 ### data_al1_rare
 The following variants are selected:
 Variants with frequency in gnomAD_NFE/ExAC_EUR < 1%
-Indels with unknown frequency that appear only once in the dataset
-Missense with unknown frequency in gnomAD_NFE/ExAC_EUR
 Variants that are classified as Pathogenic or Likely Pathogenic in CLINSIG with frequency in gnomAD_NFE/ExAC_EUR < 5%
 Feature i,j is 1 if gene i in sample j has at least one variant in the previous list (it doesn’t matter if the variant is in homozygosis or heterozygosis).
 
 ### data_al2_rare
 The following variants are selected:
 Variants with frequency in gnomAD_NFE/ExAC_EUR < 1%
-Indels with unknown frequency that appear only once in the dataset
-Missens with unknown frequency
 Variants that are classified as Pathogenic or Likely Pathogenic in CLINSIG with frequency in gnomAD_NFE/ExAC_EUR < 5%
 Feature i,j is 1 if gene i in sample j has at least one homozygous variant or two heterozygous variants in the previous list. For male subjects, hemizygous variants on chromosome X are also considered.
 
