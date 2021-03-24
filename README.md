@@ -2,7 +2,7 @@
 
 * boolean_features.py: Generation of the boolean representation from variants annoted with VEP
 
-* analysis.py: Feature extraction by logistic regression with LASSO regularization
+* pipeline_post_mendelian.py: Feature extraction by logistic regression with LASSO regularization
 
 For computing the adjusted phenotype, a CSV file with the following format is required:
 * One column named sample with the unique ID of the sample
