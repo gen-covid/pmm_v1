@@ -19,7 +19,7 @@ Only PCR-positive individuals should be included.
 ## Boolean representations
 For all the analyses only variants that are classified with impact HIGH or MODERATE in Ensemble are retained, namely: 'transcript_ablation', 'splice_acceptor_variant', 'splice_donor_variant', 'stop_gained', 'frameshift_variant', 'stop_lost', 'start_lost', 'transcript_amplification', 'inframe_insertion', 'inframe_deletion', 'missense_variant', 'protein_altering_variant'.
 
-The required inputs for this step are the VCF files and VEP annotation files divided by chromosomes. GRCh38 is assumed as a reference genome.
+The required inputs for this step are the VCF files and VEP annotation files divided by chromosomes and sorted by ensembl gene code. GRCh38 is assumed as a reference genome.
 
 To execute this step run:
 bash boolean_features.sh to sort the annotation files by gene
